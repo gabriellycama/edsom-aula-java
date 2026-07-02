@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>3B - Exercício: IMC</title>
+</head>
+<body>
+    <h2>Exercício 3B: IMC do Paciente</h2>
+    <p>Peso: 80kg | Altura: 1.80m</p>
+    <button onclick="mostrarIMC()">Calcular IMC</button>
+    <p id="txtIMC">IMC: ---</p>
+
+    <script>
+        const paciente = {
+    peso: 80,
+    altura: 1.80,
+    calcularIMC: function() {
+        return this.peso / (this.altura * this.altura);
+    }
+};
+
+function mostrarIMC() {
+    let imc = paciente.calcularIMC();
+    document.getElementById("txtIMC").innerText = "IMC: " + imc.toFixed(1);
+}
+    </script>
+</body>
+</html>

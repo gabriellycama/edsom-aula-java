@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>4B - Exercício: Seguir</title>
+</head>
+<body>
+    <h2>Exercício 4B: Rede Social</h2>
+    <button onclick="cliqueSeguir()" id="btnSeguir">Seguir</button>
+
+    <script>
+       const perfil = {
+    seguindo: false,
+    trocarSeguir: function() {
+        this.seguindo = !this.seguindo;
+    }
+};
+
+function cliqueSeguir() {
+    perfil.trocarSeguir();
+    document.getElementById("btnSeguir").innerText = perfil.seguindo ? "Seguindo ✓" : "Seguir";
+}
+    </script>
+</body>
+</html>
